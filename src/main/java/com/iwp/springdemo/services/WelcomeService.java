@@ -8,6 +8,6 @@ public class WelcomeService {
     private static final String HELLO = "Hello";
 
     public String getMessage(String name) {
-        return HELLO + " Miss/Mrs/MR " + name + ", " + WELCOME_MESSAGE;
+        return HELLO + " Mx " + name + ", " + WELCOME_MESSAGE;
     }
 }
