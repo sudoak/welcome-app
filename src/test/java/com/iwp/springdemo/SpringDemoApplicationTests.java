@@ -39,6 +39,6 @@ public class SpringDemoApplicationTests {
 
         String content = result.getResponse().getContentAsString();
 
-		assertEquals("Hello all, Welcome to Vapasi!", content);
+		assertEquals("Hello Mx all, Welcome to Vapasi!", content);
 	}
 }
