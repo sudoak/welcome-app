@@ -32,13 +32,13 @@ public class SpringDemoApplicationTests {
 
 	@Test
 	public void contextLoads() throws Exception {
-		MvcResult result = mockMvc.perform(get("/welcome/archana"))
+		MvcResult result = mockMvc.perform(get("/welcome/all"))
 				.andExpect(status().is(200))
 				.andExpect(content().contentType("text/plain;charset=UTF-8"))
                 .andReturn();
 
         String content = result.getResponse().getContentAsString();
 
-		assertEquals("Hello archana, Welcome to Vapasi!", content);
+		assertEquals("Hello all, Welcome to Vapasi!", content);
 	}
 }
