@@ -16,3 +16,13 @@ jobs:
           java-version: 1.8
       - name: Build with Gradle
         run: ./gradlew build
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.6.8 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "welcome-vapasi-all"
+          heroku_email: "sudoakk@gmail.com"
