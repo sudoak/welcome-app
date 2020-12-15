@@ -24,5 +24,5 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.6.8 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "welcome-vapasi-all"
+          heroku_app_name: "welcome-manual-app-dev"
           heroku_email: "sudoakk@gmail.com"
