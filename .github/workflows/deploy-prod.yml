@@ -2,7 +2,11 @@ name: Deploy to Production
 
 on:
   workflow_dispatch:
-
+  workflow_run:
+    workflows: [ "Build & Deploy to Dev" ]
+    branches: [ master ]
+    types:
+      - completed
 jobs:
 
   deploy-prod:
